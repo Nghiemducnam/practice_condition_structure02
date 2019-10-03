@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><p>Nhập vào mét:</p></td>
+    </tr>
+
+    <tr>
+        <td><input id ="input1" type="text" ></td>
+        <td> <button type="button" onclick="showResult()">result</button></td>
+
+</table>
+<script>
+    function showResult() {
+        let m =  parseFloat(document.getElementById("input1").value);
+        let result= m*3.0828;
+        alert("kết quả là:" + result +"feet")
+    }
+</script>
+</body>
+</html>

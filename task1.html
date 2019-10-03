@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><p>Nhập vào nhiệt độ:</p></td>
+    </tr>
+
+    <tr>
+     <td><input id ="input1" type="text" ></td>
+    <td> <button type="button" onclick="showResult()">result</button></td>
+
+</table>
+     <script>
+function showResult() {
+    let a=  parseInt(document.getElementById("input1").value);
+    let result= (a*9)/5 +32;
+        alert("độ F là:" + result)
+}
+     </script>
+</body>
+</html>

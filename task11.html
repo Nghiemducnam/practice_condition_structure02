@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td> <input id= "input1" type="text"></td>
+        <td><button type="button" onclick="showTax()"> Tax= </button> </td>
+    </tr>
+</table>
+     <script>
+           function showTax() {
+               let input = parseInt(document.getElementById("input1").value);
+               let sum;
+               if (input > 9000000) {
+                   sum = input * 0.1;
+                   alert("thuế thu nhập cá nhân bạn phải chịu là:" +sum);
+               }else {
+                   alert("bạn không phải chịu thuế")
+               }
+           }
+
+
+
+     </script>
+</body>
+</html>

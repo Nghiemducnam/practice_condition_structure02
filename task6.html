@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><p>Nhập a:</p></td>
+        <td><p>Nhập b:</p></td>
+    </tr>
+
+    <tr>
+        <td><input id ="input1" type="text" ></td>
+        <td><input id ="input2" type="text" ></td>
+        <td> <button type="button" onclick="showResult()">result</button></td>
+
+</table>
+
+<script>
+    function showResult() {
+        let a = parseInt(document.getElementById("input1").value);
+        let b = parseInt(document.getElementById("input2").value);
+        let x= -b/a;
+            if( a==0 && b==0) {
+                alert("Phương trình có vô số nghiệm");
+            }else if (a==0 &&( b>0|| b<0)) {
+                alert("Phương trình vô nghiệm!");
+            }else if(a<0 || a>0) {
+                alert("Phương trình có 1 nghiệm duy nhất"+ " " + "x=" + x);
+            }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><p>Nhập a:</p></td>
+        <td><p>Nhập b:</p></td>
+        <td><p>Nhập c:</p></td>
+    </tr>
+
+    <tr>
+        <td><input id ="input1" type="text" ></td>
+        <td><input id ="input2" type="text" ></td>
+        <td><input id ="input3" type="text" ></td>
+
+        <td> <button type="button" onclick="showResult()">result</button></td>
+
+</table>
+
+<script>
+    function showResult() {
+        let a = parseInt(document.getElementById("input1").value);
+        let b = parseInt(document.getElementById("input2").value);
+        let c = parseInt(document.getElementById("input3").value);
+        let delta = Math.pow(b, 2) - (4 * a * c);
+        let x12 = -b / (2 * a);
+        let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+        let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+
+
+        if (delta < 0) {
+            alert("Phương trình vô nghiệm!");
+        } else if (delta == 0) {
+            alert("Phương trình có nghiệm kép x1 = x2 =" + "" + x12);
+        } else if (delta > 0) {
+            alert("Phương trình có 2 nghiệm:" + " " + "X1=" + x1 + "và X2=" + x2);
+        }else if( a+b+c==0 && a!=0) {
+            alert("Phương trình có 2 nghiệm là:"+ "1 và "+(c/a))
+            }else if(a-b+c==0 && a!=0) {
+            alert("Phương trình có 2 nghiệm là:" + "-1 và " +(-c/a) )
+        }else{
+            alert( "xin mời nhập lại!");
+        }
+
+    }
+</script>
+
+</body>
+</html>
