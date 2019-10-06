@@ -6,15 +6,19 @@
 </head>
 <body>
       <script>
-          let a= parseInt(prompt("nhập vào số lượng điện tiêu thụ (kW):"));
+          let power= parseInt(prompt("nhập vào số lượng điện tiêu thụ (kW):"));
           let total;
-          if(a>0) {
-              total= a*1549;
-              alert("Tiền điện của bạn là:" + total);
+          if(power<0) {
+              alert('Xin mời nhập lại');
+          }else if(power< 100) {
+              alert('Tiền điện bạn cần thanh toán là:' + (power * 1570) + "VNĐ");
+          }else if( power <200) {
+              alert('Tiền điện bạn cần thanh toán là:' + (power * 1450+ "VNĐ"));
+          }else if( power< 250) {
+              alert('Tiền điện bạn cần thanh toán là:' + (power * 1300+ "VNĐ"));
           }else {
-              alert("xin vui lòng nhập lại");
+              alert('Tiền điện bạn cần thanh toán là:' + (power * 1150+ "VNĐ"));
           }
-
       </script>
 </body>
 </html>

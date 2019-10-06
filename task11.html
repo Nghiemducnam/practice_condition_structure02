@@ -13,13 +13,23 @@
 </table>
      <script>
            function showTax() {
-               let input = parseInt(document.getElementById("input1").value);
+               let salary = parseInt(document.getElementById("input1").value);
                let sum;
-               if (input > 9000000) {
-                   sum = input * 0.1;
-                   alert("thuế thu nhập cá nhân bạn phải chịu là:" +sum);
+               if(salary<0) {
+                   alert('xin mời nhập lại!')
+               }else if (salary<9000000 ) {
+                  alert("Bạn không phải nộp thuế TNCN")
+               }else if(salary<=10000000) {
+                   alert("số tiền thuế thu nhập cá nhân bạn phải nộp là:" + (salary*0.1) + "VNĐ");
+               }else if(salary<=18000000) {
+                   alert("số tiền thuế thu nhập cá nhân bạn phải nộp là:" + (salary*0.15) + "VNĐ");
+
+               }else if(salary<=32000000){
+                   alert("số tiền thuế thu nhập cá nhân bạn phải nộp là:" + (salary*0.2) + "VNĐ");
+               }else if(salary<=52000000){
+                   alert("số tiền thuế thu nhập cá nhân bạn phải nộp là:" + (salary*0.25) + "VNĐ");
                }else {
-                   alert("bạn không phải chịu thuế")
+                   alert("số tiền thuế thu nhập cá nhân bạn phải nộp là:" + (salary*0.3) + "VNĐ");
                }
            }
 
